@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset=windows-1250>
+<title>nudze sie</title>
+<style>
+#content {
+	float: left;
+	width: 50%;
+	height: 720px;
+	border: 1px solid gray;
+}
+#button{
+	float: left;
+	width: 49%;
+	height: 720px;
+	border-top: 1px solid gray;
+	margin: auto;
+}
+img#button > #button {
+	display: block;
+	width: 250px;
+	height: 250px;
+	
+}
+img#memes {
+	padding-top: 10px;
+	display: block;
+	max-height: 700px;
+	max-width: 70%;
+	margin: auto;
+}
+</style>
+<script>
+var x = 1
+function meme() {
+x = Math.floor((Math.random() * 52) + 1) 
+document.getElementById("memes").src = "meme/meme (" + x + ").jpg"
+}
+</script>
+</head>
+
+<body>
+
+<div id=content>
+
+<img id="memes" src="meme/default.jpg">
+
+</div>
+<div id=button>
+<!--<button onclick="meme()">xd</button>--->
+<img id="button" src="button.png" onclick="meme()">
+</div>
