@@ -4,47 +4,51 @@
 <meta charset=windows-1250>
 <title>nudze sie</title>
 <style>
-#content {
+div#content {
+
 	float: left;
 	width: 50%;
-	height: 720px;
+	height: 100%;
 	border: 1px solid gray;
 }
-#button{
-	float: left;
+div#button{
+	float: right;
 	width: 49%;
 	height: 720px;
-	border-top: 1px solid gray;
+	border: 1px solid gray;	
+}
+div#button:not(img#button) {
+//idk
+}
+img#button {
+	display: block;
+	max-width: 250px;
+	max-height: 250px;
 	margin: auto;
 }
-img#button > #button {
-	display: block;
-	width: 250px;
-	height: 250px;
-	
-}
 img#memes {
-	padding-top: 10px;
 	display: block;
-	max-height: 700px;
-	max-width: 70%;
+	padding-top: 10px;
+	max-height: 100%;
+	max-width: 98%;
 	margin: auto;
 }
 </style>
 <script>
-var x = 1
+var x = 0
 function meme() {
 x = Math.floor((Math.random() * 52) + 1) 
 document.getElementById("memes").src = "meme/meme (" + x + ").jpg"
+document.getElementById("memessource").href = "meme/meme (" + x + ").jpg"
 }
 </script>
 </head>
 
 <body>
-
+<!--jebać nie chce mi sie xdddddd--->
 <div id=content>
 
-<img id="memes" src="meme/default.jpg">
+<a target="_blank" href="" id="memessource"><img id="memes" src="meme/default.jpg"></a>
 
 </div>
 <div id=button>
